@@ -6,6 +6,7 @@ import 'package:muliti_vendor_app/consts/utils.dart';
 import 'package:muliti_vendor_app/view/notification_screen.dart';
 import 'package:muliti_vendor_app/viewModel/notification_view_model.dart';
 import 'package:muliti_vendor_app/widgets/google_Font_Style.dart';
+import 'package:muliti_vendor_app/widgets/product_card.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,7 +21,6 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           child: SafeArea(
             child: Column(
-              // crossAxisAlignment: CrossAxisAlignment.start,
               spacing: 10,
               children: [
                 _buildLocation(),
@@ -29,6 +29,8 @@ class HomeScreen extends StatelessWidget {
                 Utils.kSpacingH,
                 _buildCategory(),
                 _buildCarousel(),
+                Utils.kSpacingH,
+                _buildTrending(),
               ],
             ),
           ),
@@ -37,6 +39,55 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  Column _buildTrending() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // Header
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text(
+                'Trending',
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'See all',
+                style: TextStyle(fontSize: 16, color: Colors.green),
+              ),
+            ],
+          ),
+        ),
+
+        // Horizontal scrolling: each item is a column with 2 identical cards
+        SizedBox(
+          height: 260, // enough to show 2 cards with padding
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 3,
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            itemBuilder: (context, index) {
+              return SizedBox(
+                width: 290,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: const [
+                    TrendingProductCard(),
+                    Utils.kSpacingH,
+                    TrendingProductCard(),
+                  ],
+                ),
+              );
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  //helper method for building carousel
   Column _buildCarousel() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,14 +105,10 @@ class HomeScreen extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Container(
-                // margin: EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
                   color:
-                      index == 1 ? AppColors.primary : AppColors.offertagColor,
+                      index == 1 ? AppColors.offertagColor : AppColors.primary,
                   borderRadius: BorderRadius.circular(5),
-                  // image: DecorationImage(
-                  //   image: AssetImage('assets/images/fruits.png'),
-                  // ),
                 ),
                 child: Row(
                   children: [
@@ -107,7 +154,7 @@ class HomeScreen extends StatelessWidget {
           options: CarouselOptions(
             height: 200,
             reverse: false,
-            autoPlay: false,
+            autoPlay: true,
             autoPlayInterval: const Duration(seconds: 3),
             scrollDirection: Axis.horizontal,
             initialPage: 0,
@@ -119,6 +166,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  //helper method for building category
   Column _buildCategory() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -159,6 +207,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  //helper method for building search bar area
   Row _buildSearch(BuildContext context) {
     return Row(
       children: [
@@ -210,6 +259,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  //helper method for building location
   Row _buildLocation() {
     return Row(
       spacing: 5,
@@ -226,6 +276,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  //helper method for building items inside the category
   _buildCategoryItems(int index) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
