@@ -5,6 +5,7 @@ class Utils {
   static const kSpacingH = SizedBox(height: 10);
   static const kSpacingSmallH = SizedBox(height: 5);
   static const kSpacingW = SizedBox(width: 10);
+  static const kSpacingSmallW = SizedBox(width: 5);
 
   static TextStyle googleFontStyle({
     required String fontFamily,

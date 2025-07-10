@@ -33,12 +33,85 @@ class HomeScreen extends StatelessWidget {
                 _buildTrending(),
                 Utils.kSpacingH,
                 _buildCrazeDeals(),
+                Utils.kSpacingH,
+                _buildReferAndEarn(),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  Container _buildReferAndEarn() {
+    return Container(
+                decoration: BoxDecoration(
+                  color: AppColors.primary,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                    top: 10,
+                    right: 10,
+                  ),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15),
+                            child: GoogleFontText(
+                              'Refer & Earn',
+                              fontFamily: 'Quicksand',
+                              fontWeight: FontWeight.w700,
+                              fontSize: 20,
+                              color: AppColors.backGround,
+                            ),
+                          ),
+                          Utils.kSpacingSmallH,
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 15),
+                            child: Row(
+                              children: [
+                                GoogleFontText(
+                                  'Invite your friends & earn',
+                                  fontFamily: 'Quicksand',
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14,
+                                  color: AppColors.backGround,
+                                ),
+                                Utils.kSpacingSmallW,
+                                GoogleFontText(
+                                  '15% off',
+                                  fontFamily: 'Quicksand',
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 18,
+                                  color: AppColors.backGround,
+                                ),
+                                Utils.kSpacingW,
+                                Icon(
+                                  Icons.arrow_circle_right,
+                                  color: AppColors.backGround,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Expanded(
+                        child: Image.asset(
+                          'assets/images/gift.png',
+                          width: 72,
+                          height: 75.59,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
   }
 
   Column _buildCrazeDeals() {
