@@ -56,7 +56,8 @@ class HomeScreen extends StatelessWidget {
               child: Container(
                 // margin: EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
-                  color: AppColors.primary,
+                  color:
+                      index == 1 ? AppColors.primary : AppColors.offertagColor,
                   borderRadius: BorderRadius.circular(5),
                   // image: DecorationImage(
                   //   image: AssetImage('assets/images/fruits.png'),
