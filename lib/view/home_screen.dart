@@ -6,7 +6,8 @@ import 'package:muliti_vendor_app/consts/utils.dart';
 import 'package:muliti_vendor_app/view/notification_screen.dart';
 import 'package:muliti_vendor_app/viewModel/notification_view_model.dart';
 import 'package:muliti_vendor_app/widgets/google_Font_Style.dart';
-import 'package:muliti_vendor_app/widgets/product_card.dart';
+import 'package:muliti_vendor_app/widgets/near_store_product_card.dart';
+import 'package:muliti_vendor_app/widgets/trending_product_card.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -35,6 +36,64 @@ class HomeScreen extends StatelessWidget {
                 _buildCrazeDeals(),
                 Utils.kSpacingH,
                 _buildReferAndEarn(),
+                Utils.kSpacingH,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          GoogleFontText(
+                            'Nearby stores',
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 22,
+                          ),
+                          GoogleFontText(
+                            'See all',
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            color: AppColors.primary,
+                          ),
+                        ],
+                      ),
+                    ),
+                    NearProductCard(),
+                    Utils.kSpacingSmallH,
+                    NearProductCard(),
+                    Utils.kSpacingXL,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        MaterialButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                              10,
+                            ), // Set your radius here
+                          ),
+                          onPressed: () {},
+                          color: AppColors.primary,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 50,
+                              vertical: 10,
+                            ),
+                            child: GoogleFontText(
+                              'View all store',
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: AppColors.backGround,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -45,73 +104,69 @@ class HomeScreen extends StatelessWidget {
 
   Container _buildReferAndEarn() {
     return Container(
-                decoration: BoxDecoration(
-                  color: AppColors.primary,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 10,
-                    top: 10,
-                    right: 10,
+      decoration: BoxDecoration(
+        color: AppColors.primary,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
+        child: Row(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: GoogleFontText(
+                    'Refer & Earn',
+                    fontFamily: 'Quicksand',
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                    color: AppColors.backGround,
                   ),
+                ),
+                Utils.kSpacingSmallH,
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 15),
                   child: Row(
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15),
-                            child: GoogleFontText(
-                              'Refer & Earn',
-                              fontFamily: 'Quicksand',
-                              fontWeight: FontWeight.w700,
-                              fontSize: 20,
-                              color: AppColors.backGround,
-                            ),
-                          ),
-                          Utils.kSpacingSmallH,
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 15),
-                            child: Row(
-                              children: [
-                                GoogleFontText(
-                                  'Invite your friends & earn',
-                                  fontFamily: 'Quicksand',
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 14,
-                                  color: AppColors.backGround,
-                                ),
-                                Utils.kSpacingSmallW,
-                                GoogleFontText(
-                                  '15% off',
-                                  fontFamily: 'Quicksand',
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 18,
-                                  color: AppColors.backGround,
-                                ),
-                                Utils.kSpacingW,
-                                Icon(
-                                  Icons.arrow_circle_right,
-                                  color: AppColors.backGround,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
+                      GoogleFontText(
+                        'Invite your friends & earn',
+                        fontFamily: 'Quicksand',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                        color: AppColors.backGround,
                       ),
-                      Expanded(
-                        child: Image.asset(
-                          'assets/images/gift.png',
-                          width: 72,
-                          height: 75.59,
-                          fit: BoxFit.contain,
-                        ),
+                      Utils.kSpacingSmallW,
+                      GoogleFontText(
+                        '15% off',
+                        fontFamily: 'Quicksand',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 18,
+                        color: AppColors.backGround,
+                      ),
+                      Utils.kSpacingW,
+                      Icon(
+                        Icons.arrow_circle_right,
+                        color: AppColors.backGround,
                       ),
                     ],
                   ),
                 ),
-              );
+              ],
+            ),
+            Expanded(
+              child: Image.asset(
+                'assets/images/gift.png',
+                width: 72,
+                height: 75.59,
+                fit: BoxFit.contain,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Column _buildCrazeDeals() {

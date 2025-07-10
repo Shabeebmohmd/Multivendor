@@ -3,9 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Utils {
   static const kSpacingH = SizedBox(height: 10);
+  static const kSpacingXL = SizedBox(height: 40);
   static const kSpacingSmallH = SizedBox(height: 5);
   static const kSpacingW = SizedBox(width: 10);
   static const kSpacingSmallW = SizedBox(width: 5);
+  static const kSpacingXSW = SizedBox(width: 2);
 
   static TextStyle googleFontStyle({
     required String fontFamily,

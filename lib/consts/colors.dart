@@ -6,6 +6,7 @@ class AppColors {
   static const red = Colors.red;
   static const backGround = Colors.white;
   static const black = Colors.black;
-  static const grey = Color.fromARGB(255, 126, 126, 126);
+  static const greyDark = Color.fromARGB(255, 126, 126, 126);
+  static const greyLight = Color.fromARGB(255, 212, 212, 212);
   static const button_1 = Color.fromARGB(255, 255, 137, 24);
 }

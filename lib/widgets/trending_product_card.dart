@@ -9,7 +9,7 @@ class TrendingProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 286,
+      // width: 286,
       padding: const EdgeInsets.all(12),
       margin: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
@@ -22,7 +22,7 @@ class TrendingProductCard extends StatelessWidget {
       child: Row(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(5),
             child: Image.asset(
               'assets/images/icecream.jpg',
               width: 80,
@@ -46,14 +46,14 @@ class TrendingProductCard extends StatelessWidget {
                   'Sweets, North Indian\n(store location) | 6.4 kms',
                   fontFamily: 'Quicksand',
                   fontSize: 12,
-                  color: AppColors.grey,
+                  color: AppColors.greyDark,
                 ),
                 Utils.kSpacingSmallH,
                 GoogleFontText(
                   '★ 4.1 | 45 mins',
                   fontFamily: 'Poppins',
                   fontSize: 14,
-                  color: AppColors.grey,
+                  color: AppColors.greyDark,
                 ),
               ],
             ),
