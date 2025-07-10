@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:muliti_vendor_app/consts/colors.dart';
+import 'package:muliti_vendor_app/consts/utils.dart';
+import 'package:muliti_vendor_app/widgets/google_Font_Style.dart';
 
 class TrendingProductCard extends StatelessWidget {
   const TrendingProductCard({super.key});
@@ -6,12 +9,12 @@ class TrendingProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 260,
+      width: 286,
       padding: const EdgeInsets.all(12),
       margin: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(5),
         boxShadow: const [
           BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2)),
         ],
@@ -22,33 +25,35 @@ class TrendingProductCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             child: Image.asset(
               'assets/images/icecream.jpg',
-              width: 70,
-              height: 70,
+              width: 80,
+              height: 88,
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(width: 12),
+          Utils.kSpacingW,
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
-                Text(
+                GoogleFontText(
                   'Mithas Bhandar',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  fontFamily: 'Quicksand',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 18,
                 ),
-                SizedBox(height: 4),
-                Text(
+                Utils.kSpacingSmallH,
+                GoogleFontText(
                   'Sweets, North Indian\n(store location) | 6.4 kms',
-                  style: TextStyle(fontSize: 13, color: Colors.grey),
+                  fontFamily: 'Quicksand',
+                  fontSize: 12,
+                  color: AppColors.grey,
                 ),
-                SizedBox(height: 6),
-                Text(
+                Utils.kSpacingSmallH,
+                GoogleFontText(
                   '★ 4.1 | 45 mins',
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 14,
-                  ),
+                  fontFamily: 'Poppins',
+                  fontSize: 14,
+                  color: AppColors.grey,
                 ),
               ],
             ),
