@@ -37,68 +37,71 @@ class HomeScreen extends StatelessWidget {
                 Utils.kSpacingH,
                 _buildReferAndEarn(),
                 Utils.kSpacingH,
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          GoogleFontText(
-                            'Nearby stores',
-                            fontFamily: 'Quicksand',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 22,
-                          ),
-                          GoogleFontText(
-                            'See all',
-                            fontFamily: 'Quicksand',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 16,
-                            color: AppColors.primary,
-                          ),
-                        ],
-                      ),
-                    ),
-                    NearProductCard(),
-                    Utils.kSpacingSmallH,
-                    NearProductCard(),
-                    Utils.kSpacingXL,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        MaterialButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              10,
-                            ), // Set your radius here
-                          ),
-                          onPressed: () {},
-                          color: AppColors.primary,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 50,
-                              vertical: 10,
-                            ),
-                            child: GoogleFontText(
-                              'View all store',
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                              color: AppColors.backGround,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                _buildNearbyStore(),
+                Utils.kSpacingH,
               ],
             ),
           ),
         ),
       ),
+    );
+  }
+
+  Column _buildNearbyStore() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              GoogleFontText(
+                'Nearby stores',
+                fontFamily: 'Quicksand',
+                fontWeight: FontWeight.w700,
+                fontSize: 22,
+              ),
+              GoogleFontText(
+                'See all',
+                fontFamily: 'Quicksand',
+                fontWeight: FontWeight.w700,
+                fontSize: 16,
+                color: AppColors.primary,
+              ),
+            ],
+          ),
+        ),
+        NearProductCard(),
+        Utils.kSpacingSmallH,
+        NearProductCard(),
+        Utils.kSpacingXL,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            MaterialButton(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10), // Set your radius here
+              ),
+              onPressed: () {},
+              color: AppColors.primary,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 50,
+                  vertical: 10,
+                ),
+                child: GoogleFontText(
+                  'View all store',
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16,
+                  color: AppColors.backGround,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 
