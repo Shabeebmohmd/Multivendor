@@ -5,6 +5,7 @@ import 'package:muliti_vendor_app/consts/data.dart';
 import 'package:muliti_vendor_app/consts/utils.dart';
 import 'package:muliti_vendor_app/view/notification_screen.dart';
 import 'package:muliti_vendor_app/viewModel/notification_view_model.dart';
+import 'package:muliti_vendor_app/widgets/bottom_nav_icon.dart';
 import 'package:muliti_vendor_app/widgets/google_Font_Style.dart';
 import 'package:muliti_vendor_app/widgets/near_store_product_card.dart';
 import 'package:muliti_vendor_app/widgets/trending_product_card.dart';
@@ -16,6 +17,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavWidget(),
       backgroundColor: AppColors.backGround,
       body: SingleChildScrollView(
         child: Padding(

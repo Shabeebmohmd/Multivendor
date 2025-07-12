@@ -19,3 +19,10 @@ const List<String> categoryImages = [
   'assets/images/category-7.png',
   'assets/images/category-8.png',
 ];
+
+const List<String> bottomIcons = [
+  'assets/images/bottom/home.png',
+  'assets/images/bottom/cart.png',
+  'assets/images/bottom/order.png',
+  'assets/images/bottom/account.png',
+];

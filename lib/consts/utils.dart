@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:muliti_vendor_app/widgets/google_font_style.dart';
 
 class Utils {
   static const kSpacingH = SizedBox(height: 10);
@@ -26,6 +27,29 @@ class Utils {
       fontStyle: fontStyle,
       letterSpacing: letterSpacing,
       height: height,
+    );
+  }
+
+  SizedBox iconBuilder({
+    required String label,
+    required String image,
+    double? textSize,
+    double? width,
+    double? height,
+  }) {
+    return SizedBox(
+      width: width ?? 30,
+      height: height ?? 50,
+      child: Column(
+        children: [
+          Image.asset(image),
+          GoogleFontText(
+            label,
+            fontFamily: 'Quicksand',
+            fontSize: textSize ?? 10,
+          ),
+        ],
+      ),
     );
   }
 }
