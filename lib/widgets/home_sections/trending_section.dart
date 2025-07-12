@@ -14,7 +14,7 @@ class TrendingSection extends StatelessWidget {
       children: [
         // Header
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: Utils.kFontSizeM),
+          padding: const EdgeInsets.symmetric(vertical: Utils.kSpacingM),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
