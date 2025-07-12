@@ -7,9 +7,10 @@ class Utils {
   static const double kSpacingXS = 2.0;
   static const double kSpacingS = 5.0;
   static const double kSpacingM = 10.0;
+  static const double kSpacingXM = 17.0;
   static const double kSpacingL = 20.0;
-  static const double kSpacingXL = 40.0; 
-  
+  static const double kSpacingXL = 40.0;
+
   // Font sizes
   static const double kFontSizeXS = 10.0;
   static const double kFontSizeS = 12.0;
@@ -17,7 +18,7 @@ class Utils {
   static const double kFontSizeL = 16.0;
   static const double kFontSizeXL = 20.0;
   static const double kFontSizeXXL = 22.0;
-  
+
   // Border radius
   static const double kBorderRadiusS = 5.0;
   static const double kBorderRadiusM = 8.0;

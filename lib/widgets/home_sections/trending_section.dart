@@ -14,7 +14,7 @@ class TrendingSection extends StatelessWidget {
       children: [
         // Header
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8),
+          padding: const EdgeInsets.symmetric(vertical: Utils.kFontSizeM),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
@@ -37,7 +37,7 @@ class TrendingSection extends StatelessWidget {
 
         // Horizontal scrolling: each item is a column with 2 identical cards
         SizedBox(
-          height: 260, // enough to show 2 cards with padding
+          height: 200, // enough to show 2 cards with padding
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 3,

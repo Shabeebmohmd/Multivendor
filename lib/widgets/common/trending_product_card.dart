@@ -10,14 +10,14 @@ class TrendingProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // width: 286,
-      padding: const EdgeInsets.all(12),
-      margin: const EdgeInsets.symmetric(horizontal: 8),
+      // padding: const EdgeInsets.all(12),
+      // margin: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(5),
-        boxShadow: const [
-          BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2)),
-        ],
+        // boxShadow: const [
+        //   BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2)),
+        // ],
       ),
       child: Row(
         children: [
@@ -30,7 +30,7 @@ class TrendingProductCard extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-         const SizedBox(width: Utils.kSpacingM),
+          const SizedBox(width: Utils.kSpacingM),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +41,7 @@ class TrendingProductCard extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                   fontSize: 18,
                 ),
-               SizedBox(height: Utils.kSpacingS),
+                SizedBox(height: Utils.kSpacingS),
                 GoogleFontText(
                   'Sweets, North Indian\n(store location) | 6.4 kms',
                   fontFamily: 'Quicksand',

@@ -4,7 +4,7 @@ import 'package:muliti_vendor_app/consts/utils.dart';
 import 'package:muliti_vendor_app/widgets/common/bottom_nav_icon.dart';
 import 'package:muliti_vendor_app/widgets/home_sections/category_section.dart';
 import 'package:muliti_vendor_app/widgets/home_sections/craze_deal_section.dart';
-import 'package:muliti_vendor_app/widgets/home_sections/fruit_carousel_section.dart';
+import 'package:muliti_vendor_app/widgets/home_sections/top_pick_section.dart';
 import 'package:muliti_vendor_app/widgets/home_sections/location_section.dart';
 import 'package:muliti_vendor_app/widgets/home_sections/near_store_section.dart';
 import 'package:muliti_vendor_app/widgets/home_sections/refer_earn_section.dart';
@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: AppColors.backGround,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.all(Utils.kSpacingXM),
           child: SafeArea(
             child: Column(
               spacing: Utils.kSpacingM,
@@ -32,10 +32,10 @@ class HomeScreen extends StatelessWidget {
                 SearchSection(context: context),
                 SizedBox(height: Utils.kSpacingM),
                 CategorySection(),
-                FruitCarouselSection(),
+                TopPickSection(),
                 SizedBox(height: Utils.kSpacingM),
                 TrendingSection(),
-                SizedBox(height: Utils.kSpacingM),
+                // SizedBox(height: Utils.kSpacingS),
                 CrazedealsSection(),
                 SizedBox(height: Utils.kSpacingM),
                 referandEarnSection,

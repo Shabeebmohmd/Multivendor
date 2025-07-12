@@ -4,10 +4,7 @@ import 'package:muliti_vendor_app/consts/data.dart';
 import 'package:muliti_vendor_app/widgets/common/google_font_style.dart';
 
 class CategoryItemBuilder extends StatelessWidget {
-  const CategoryItemBuilder({
-    super.key,
-    required this.index,
-  });
+  const CategoryItemBuilder({super.key, required this.index});
 
   final int index;
 
@@ -24,8 +21,6 @@ class CategoryItemBuilder extends StatelessWidget {
                   color: Colors.white,
                   child: Container(
                     constraints: BoxConstraints(minWidth: 50, minHeight: 65),
-                    padding: EdgeInsets.all(12),
-
                     child: Center(
                       child: SizedBox(
                         width: 40,
