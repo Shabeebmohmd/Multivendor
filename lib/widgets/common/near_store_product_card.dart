@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muliti_vendor_app/consts/colors.dart';
 import 'package:muliti_vendor_app/consts/utils.dart';
-import 'package:muliti_vendor_app/widgets/google_font_style.dart';
+import 'package:muliti_vendor_app/widgets/common/google_font_style.dart';
 
 class NearProductCard extends StatelessWidget {
   const NearProductCard({super.key});
@@ -32,7 +32,7 @@ class NearProductCard extends StatelessWidget {
               ),
             ),
           ),
-          Utils.kSpacingSmallW,
+          SizedBox(width: Utils.kSpacingS),
           Expanded(
             child: Padding(
               padding: EdgeInsets.all(8.0),
@@ -63,7 +63,7 @@ class NearProductCard extends StatelessWidget {
                             fontFamily: 'Quicksand',
                             fontSize: 12,
                           ),
-                          Utils.kSpacingSmallH,
+                          SizedBox(height: Utils.kSpacingS),
                           Container(
                             padding: EdgeInsets.all(4.5),
                             decoration: BoxDecoration(
@@ -108,7 +108,7 @@ class NearProductCard extends StatelessWidget {
                             height: 15,
                             fit: BoxFit.contain,
                           ),
-                          Utils.kSpacingSmallW,
+                          SizedBox(width: Utils.kSpacingS),
                           GoogleFontText(
                             'Upto 10% OFF',
                             fontFamily: 'Quicksand',
@@ -118,7 +118,7 @@ class NearProductCard extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Utils.kSpacingSmallW,
+                      const SizedBox(width: Utils.kSpacingS),
                       Expanded(
                         child: Row(
                           children: [
@@ -128,7 +128,7 @@ class NearProductCard extends StatelessWidget {
                               height: 15,
                               // fit: BoxFit.fitWidth,
                             ),
-                            Utils.kSpacingSmallW,
+                            const SizedBox(width: Utils.kSpacingS),
                             Flexible(
                               child: GoogleFontText(
                                 '3400+ items available',

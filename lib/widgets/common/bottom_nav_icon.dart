@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muliti_vendor_app/consts/utils.dart';
-import 'package:muliti_vendor_app/widgets/google_font_style.dart';
+import 'package:muliti_vendor_app/widgets/common/google_font_style.dart';
 
 class BottomNavWidget extends StatelessWidget {
   const BottomNavWidget({super.key});
@@ -34,7 +34,7 @@ class BottomNavWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(image, width: 30, height: 30),
-          const SizedBox(child: Utils.kSpacingSmallH),
+          const SizedBox(height: Utils.kSpacingM),
           GoogleFontText(label, fontFamily: 'Quicksand', fontSize: 12),
         ],
       ),

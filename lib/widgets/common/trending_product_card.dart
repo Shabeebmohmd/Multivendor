@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muliti_vendor_app/consts/colors.dart';
 import 'package:muliti_vendor_app/consts/utils.dart';
-import 'package:muliti_vendor_app/widgets/google_Font_Style.dart';
+import 'package:muliti_vendor_app/widgets/common/google_font_style.dart';
 
 class TrendingProductCard extends StatelessWidget {
   const TrendingProductCard({super.key});
@@ -30,7 +30,7 @@ class TrendingProductCard extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Utils.kSpacingW,
+         const SizedBox(width: Utils.kSpacingM),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,14 +41,14 @@ class TrendingProductCard extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                   fontSize: 18,
                 ),
-                Utils.kSpacingSmallH,
+               SizedBox(height: Utils.kSpacingS),
                 GoogleFontText(
                   'Sweets, North Indian\n(store location) | 6.4 kms',
                   fontFamily: 'Quicksand',
                   fontSize: 12,
                   color: AppColors.greyDark,
                 ),
-                Utils.kSpacingSmallH,
+                SizedBox(height: Utils.kSpacingS),
                 GoogleFontText(
                   '★ 4.1 | 45 mins',
                   fontFamily: 'Poppins',
