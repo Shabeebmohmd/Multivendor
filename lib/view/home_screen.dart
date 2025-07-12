@@ -528,8 +528,8 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                index < 3
-                    ? Positioned(
+                if(index<3||index==7)
+                    Positioned(
                       left: 20,
                       top: 4,
                       child: Container(
@@ -550,8 +550,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                    )
-                    : SizedBox.shrink(),
+                    ) 
               ],
             ),
             Container(),

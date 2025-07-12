@@ -20,9 +20,11 @@ const List<String> categoryImages = [
   'assets/images/category-8.png',
 ];
 
-const List<String> bottomIcons = [
-  'assets/images/bottom/home.png',
-  'assets/images/bottom/cart.png',
-  'assets/images/bottom/order.png',
-  'assets/images/bottom/account.png',
+const List<String> notificationIcons = [ 
+  'assets/images/notification/order_assigned.png',
+  'assets/images/notification/order_delivered.png',
+  'assets/images/notification/order_cancelled.png',
+  'assets/images/notification/promotion_marketplace.png',
+  'assets/images/notification/promotion_nootify.png',
+  'assets/images/notification/support_peersonnel.png',
 ];
