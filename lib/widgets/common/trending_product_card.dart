@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:muliti_vendor_app/consts/colors.dart';
-import 'package:muliti_vendor_app/consts/utils.dart';
+import 'package:muliti_vendor_app/core/consts/colors.dart';
+import 'package:muliti_vendor_app/core/consts/utils.dart';
 import 'package:muliti_vendor_app/widgets/common/google_font_style.dart';
 
 class TrendingProductCard extends StatelessWidget {
@@ -13,7 +13,7 @@ class TrendingProductCard extends StatelessWidget {
       // padding: const EdgeInsets.all(12),
       // margin: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.backGround,
         borderRadius: BorderRadius.circular(5),
         // boxShadow: const [
         //   BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2)),

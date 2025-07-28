@@ -20,7 +20,7 @@ const List<String> categoryImages = [
   'assets/images/category-8.png',
 ];
 
-const List<String> notificationIcons = [ 
+const List<String> notificationIcons = [
   'assets/images/notification/order_assigned.png',
   'assets/images/notification/order_delivered.png',
   'assets/images/notification/order_cancelled.png',
@@ -28,3 +28,6 @@ const List<String> notificationIcons = [
   'assets/images/notification/promotion_nootify.png',
   'assets/images/notification/support_peersonnel.png',
 ];
+
+const String url =
+    'https://raw.githubusercontent.com/sayanp23/test-api/main/test-notifications.json';

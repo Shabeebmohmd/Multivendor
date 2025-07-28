@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:muliti_vendor_app/consts/colors.dart';
+import 'package:muliti_vendor_app/core/consts/colors.dart';
 import 'package:muliti_vendor_app/widgets/common/google_font_style.dart';
 import 'package:muliti_vendor_app/widgets/notification/notification_view_widget.dart';
 import 'package:provider/provider.dart';
-import '../viewModel/notification_view_model.dart';
+import '../view_model/notification_view_model.dart';
 
 class NotificationView extends StatefulWidget {
-  const NotificationView({super.key});
+  final NotificationViewModel? model;
+  const NotificationView({super.key, this.model});
 
   @override
   State<NotificationView> createState() => _NotificationViewState();
@@ -31,7 +32,7 @@ class _NotificationViewState extends State<NotificationView> {
         toolbarHeight: 101,
         shadowColor: AppColors.black,
         elevation: 5,
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.backGround,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
           icon: Icon(

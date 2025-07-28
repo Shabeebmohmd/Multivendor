@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:muliti_vendor_app/consts/colors.dart';
-import 'package:muliti_vendor_app/consts/data.dart';
+import 'package:muliti_vendor_app/core/consts/colors.dart';
+import 'package:muliti_vendor_app/core/consts/data.dart';
+import 'package:muliti_vendor_app/core/consts/utils.dart';
 import 'package:muliti_vendor_app/widgets/common/google_font_style.dart';
 
 class CategoryItemBuilder extends StatelessWidget {
@@ -17,21 +18,29 @@ class CategoryItemBuilder extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Card(
-                  color: Colors.white,
-                  child: Container(
-                    constraints: BoxConstraints(minWidth: 50, minHeight: 65),
-                    child: Center(
-                      child: SizedBox(
-                        width: 40,
-                        child: Image.asset(categoryImages[index]),
+                Container(
+                  decoration: BoxDecoration(
+                    color: AppColors.backGround,
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 4,
+                        offset: Offset(0, 2),
                       ),
+                    ],
+                    borderRadius: BorderRadius.circular(Utils.kBorderRadiusS),
+                  ),
+                  constraints: BoxConstraints(minWidth: 50, minHeight: 65),
+                  child: Center(
+                    child: SizedBox(
+                      width: 40,
+                      child: Image.asset(categoryImages[index]),
                     ),
                   ),
                 ),
                 if (index < 3 || index == 7)
                   Positioned(
-                    left: 20,
+                    right: 10,
                     top: 4,
                     child: Container(
                       padding: EdgeInsets.symmetric(horizontal: 5, vertical: 1),
@@ -44,14 +53,14 @@ class CategoryItemBuilder extends StatelessWidget {
                           '10%off',
                           fontFamily: 'Quicksand',
                           color: AppColors.backGround,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 8,
                         ),
                       ),
                     ),
                   ),
               ],
             ),
-            Container(),
           ],
         ),
         Text(

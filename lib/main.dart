@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:muliti_vendor_app/app/app.dart';
 import 'package:provider/provider.dart';
-import 'view/home_screen.dart';
-import 'viewModel/notification_view_model.dart';
+import 'modules/notification/view_model/notification_view_model.dart';
 
 void main() {
   runApp(
@@ -14,21 +14,4 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Multi Vendor App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 255, 255, 255),
-        ),
-        useMaterial3: true,
-      ),
-      home: HomeScreen(),
-    );
-  }
-}

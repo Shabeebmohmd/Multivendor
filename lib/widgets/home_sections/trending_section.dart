@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:muliti_vendor_app/consts/colors.dart';
-import 'package:muliti_vendor_app/consts/utils.dart';
+import 'package:muliti_vendor_app/core/consts/colors.dart';
+import 'package:muliti_vendor_app/core/consts/utils.dart';
 import 'package:muliti_vendor_app/widgets/common/google_font_style.dart';
 import 'package:muliti_vendor_app/widgets/common/trending_product_card.dart';
 
@@ -37,7 +37,7 @@ class TrendingSection extends StatelessWidget {
 
         // Horizontal scrolling: each item is a column with 2 identical cards
         SizedBox(
-          height: 200, // enough to show 2 cards with padding
+          height: 200, 
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 3,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:muliti_vendor_app/consts/utils.dart';
+import 'package:muliti_vendor_app/core/consts/colors.dart';
+import 'package:muliti_vendor_app/core/consts/utils.dart';
 import 'package:muliti_vendor_app/widgets/common/google_font_style.dart';
 
 class BottomNavWidget extends StatelessWidget {
@@ -11,7 +12,7 @@ class BottomNavWidget extends StatelessWidget {
       width: double.infinity,
       height: 80,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.backGround,
         borderRadius: BorderRadius.circular(5),
         boxShadow: const [
           BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2)),

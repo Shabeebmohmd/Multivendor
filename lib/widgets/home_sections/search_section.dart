@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:muliti_vendor_app/consts/colors.dart';
-import 'package:muliti_vendor_app/consts/utils.dart';
-import 'package:muliti_vendor_app/view/notification_screen.dart';
-import 'package:muliti_vendor_app/viewModel/notification_view_model.dart';
-import 'package:provider/provider.dart';
+import 'package:go_router/go_router.dart';
+import 'package:muliti_vendor_app/app/router/route_names.dart';
+import 'package:muliti_vendor_app/core/consts/colors.dart';
+import 'package:muliti_vendor_app/core/consts/utils.dart';
+import 'package:muliti_vendor_app/modules/notification/view_model/notification_view_model.dart';
 
 class SearchSection extends StatelessWidget {
   const SearchSection({super.key, required this.context});
@@ -19,7 +19,7 @@ class SearchSection extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.only(left: 10, right: 10, top: 7),
             decoration: BoxDecoration(
-              color: Colors.grey[200],
+              color: AppColors.greyLight1,
               borderRadius: BorderRadius.circular(8),
             ),
             child: Center(
@@ -40,17 +40,20 @@ class SearchSection extends StatelessWidget {
         SizedBox(width: Utils.kSpacingM),
         InkWell(
           splashColor: AppColors.red,
-          onTap:
-              () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder:
-                      (context) => ChangeNotifierProvider(
-                        create: (context) => NotificationViewModel(),
-                        child: NotificationView(),
-                      ),
-                ),
-              ),
+          onTap: () {
+            final NotificationViewModel model = NotificationViewModel(); // Assign with appropriate constructor or data
+            context.goNamed(AppRouteNames.notification, extra: model);
+          },
+          // () => Navigator.push(
+          //   context,
+          //   MaterialPageRoute(
+          //     builder:
+          //         (context) => ChangeNotifierProvider(
+          //           create: (context) => NotificationViewModel(),
+          //           child: NotificationView(),
+          //         ),
+          //   ),
+          // ),
           child: SizedBox(
             width: Utils.kSpacingXL,
             height: Utils.kSpacingXL,

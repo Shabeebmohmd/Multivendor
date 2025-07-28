@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:muliti_vendor_app/consts/colors.dart';
-import 'package:muliti_vendor_app/consts/data.dart';
-import 'package:muliti_vendor_app/consts/utils.dart';
+import 'package:muliti_vendor_app/core/consts/colors.dart';
+import 'package:muliti_vendor_app/core/consts/data.dart';
+import 'package:muliti_vendor_app/core/consts/utils.dart';
 import 'package:muliti_vendor_app/widgets/common/category_item_builder.dart';
 import 'package:muliti_vendor_app/widgets/common/google_font_style.dart';
+
+
 
 class CategorySection extends StatelessWidget {
   const CategorySection({super.key});

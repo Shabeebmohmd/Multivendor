@@ -13,6 +13,7 @@ class GoogleFontText extends StatelessWidget {
   final TextAlign? textAlign;
   final TextOverflow? overflow;
   final int? maxLines;
+  final bool? softWrap;
 
   const GoogleFontText(
     this.text, {
@@ -27,6 +28,7 @@ class GoogleFontText extends StatelessWidget {
     this.textAlign,
     this.overflow,
     this.maxLines,
+    this.softWrap,
   });
 
   @override
@@ -45,6 +47,7 @@ class GoogleFontText extends StatelessWidget {
       textAlign: textAlign,
       overflow: overflow,
       maxLines: maxLines,
+      softWrap: softWrap,
     );
   }
 }

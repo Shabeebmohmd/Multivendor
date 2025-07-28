@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:muliti_vendor_app/consts/colors.dart';
-import 'package:muliti_vendor_app/consts/utils.dart';
+import 'package:muliti_vendor_app/core/consts/colors.dart';
+import 'package:muliti_vendor_app/core/consts/utils.dart';
 import 'package:muliti_vendor_app/widgets/common/bottom_nav_icon.dart';
 import 'package:muliti_vendor_app/widgets/home_sections/category_section.dart';
 import 'package:muliti_vendor_app/widgets/home_sections/craze_deal_section.dart';
@@ -16,7 +16,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var referandEarnSection = ReferandEarnSection();
     return Scaffold(
       bottomNavigationBar: BottomNavWidget(),
       backgroundColor: AppColors.backGround,
@@ -24,23 +23,23 @@ class HomeScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(Utils.kSpacingXM),
           child: SafeArea(
+            // A vertically scrollable column that contains all homepage widgets.
             child: Column(
               spacing: Utils.kSpacingM,
               children: [
-                LocationSection(),
+                LocationSection(), // Displays current location
                 SizedBox(height: Utils.kSpacingM),
-                SearchSection(context: context),
+                SearchSection(context: context), // Search bar input
                 SizedBox(height: Utils.kSpacingM),
-                CategorySection(),
-                TopPickSection(),
+                CategorySection(), // Horizontal category list
+                TopPickSection(), // Recommended top picks
                 SizedBox(height: Utils.kSpacingM),
-                TrendingSection(),
-                // SizedBox(height: Utils.kSpacingS),
-                CrazedealsSection(),
+                TrendingSection(), // Popular/trending items
+                CrazedealsSection(), // Limited-time or hot deals
                 SizedBox(height: Utils.kSpacingM),
-                referandEarnSection,
+                ReferandEarnSection(), // Referral and rewards section
                 SizedBox(height: Utils.kSpacingM),
-                NearbyStoreSection(),
+                NearbyStoreSection(), // Stores near user location
                 SizedBox(height: Utils.kSpacingM),
               ],
             ),
