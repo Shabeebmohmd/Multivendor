@@ -41,8 +41,9 @@ class SearchSection extends StatelessWidget {
         InkWell(
           splashColor: AppColors.red,
           onTap: () {
-            final NotificationViewModel model = NotificationViewModel(); // Assign with appropriate constructor or data
-            context.goNamed(AppRouteNames.notification, extra: model);
+            final NotificationViewModel model =
+                NotificationViewModel(); // Assign with appropriate constructor or data
+            context.pushNamed(AppRouteNames.notification, extra: model);
           },
           // () => Navigator.push(
           //   context,

@@ -63,6 +63,7 @@ class CategoryItemBuilder extends StatelessWidget {
             ),
           ],
         ),
+        const SizedBox(height: Utils.kSpacingM),
         Text(
           categoryNames[index].replaceFirst(' ', '\n'),
           textAlign: TextAlign.center,
